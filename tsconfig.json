@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["ESNext", "esnext.asynciterable"],
+    "target": "es2017",
+    "lib": ["es2017", "esnext.asynciterable"],
     "typeRoots": ["node_modules/@types"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "module": "commonjs",
     "pretty": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "outDir": "dist",
     "allowJs": true,
@@ -20,7 +20,6 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "baseUrl": "src",
-    "alwaysStrict": true,
     "paths": {
       "@/*": ["*"],
       "@config": ["config"],
@@ -37,7 +36,6 @@
       "@utils/*": ["utils/*"]
     }
   },
-  
   "include": ["src/**/*.ts", "src/**/*.json", ".env"],
   "exclude": ["node_modules", "src/http", "src/logs", "src/tests"]
 }

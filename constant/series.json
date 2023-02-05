@@ -1,0 +1,1214 @@
+{
+  "slug": "ssc-maths-previous-year-questions",
+  "title": "SSC Maths Previous Year Questions Mock Test Series (16k+ Questions)",
+  "is_saved": false,
+  "is_marked": false,
+  "question_score": "20%",
+  "user_attempt_list": [],
+  "marks": {
+    "positive": 2,
+    "negative": 0.5
+  },
+  "questions": [
+    {
+      "QSNo": 1,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "______ मध्यमंडल के ऊपर स्थित होता है और यह एक ऐसा क्षेत्र है, जहाँ ऊंचाई के साथ तापमान बढ़ता है।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "समताप मंडल"
+          },
+          {
+            "prompt": "2",
+            "value": "बहिर्मंडल"
+          },
+          {
+            "prompt": "3",
+            "value": "बाह्य वायुमंडल"
+          },
+          {
+            "prompt": "4",
+            "value": "क्षोभ मंडल"
+          }
+        ]
+      },
+      "english": {
+        "question": "The ______ lies above the mesopause and is a region in which temperatures increase with height.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "stratosphere"
+          },
+          {
+            "prompt": "2",
+            "value": "exosphere"
+          },
+          {
+            "prompt": "3",
+            "value": "thermosphere"
+          },
+          {
+            "prompt": "4",
+            "value": "troposphere"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 2,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "केलुचरण महापात्र निम्न में से किस श्रेणी के नृत्य के प्रतिपादक थे?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "कुचिपुड़ी"
+          },
+          {
+            "prompt": "2",
+            "value": "मणिपुरी"
+          },
+          {
+            "prompt": "3",
+            "value": "भरतनाट्यम"
+          },
+          {
+            "prompt": "4",
+            "value": "ओडिसी"
+          }
+        ]
+      },
+      "english": {
+        "question": "Kelucharan Mohapatra was an exponent of which of the following categories of dance?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Kuchipudi"
+          },
+          {
+            "prompt": "2",
+            "value": "Manipuri"
+          },
+          {
+            "prompt": "3",
+            "value": "Bharatanatyam"
+          },
+          {
+            "prompt": "4",
+            "value": "Odissi"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 3,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "2020-21 सत्र&amp;nbsp;में, &lt;span style=&quot;&quot;&gt;NBA&amp;nbsp;&lt;/span&gt;की प्रत्येक टीम ने ______ नियमित-सत्र&amp;nbsp;के खेल खेले।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "68"
+          },
+          {
+            "prompt": "2",
+            "value": "94"
+          },
+          {
+            "prompt": "3",
+            "value": "86"
+          },
+          {
+            "prompt": "4",
+            "value": "72"
+          }
+        ]
+      },
+      "english": {
+        "question": "In the 2020 - 21 season, each NBA team played ______ regular-season games.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "68"
+          },
+          {
+            "prompt": "2",
+            "value": "94"
+          },
+          {
+            "prompt": "3",
+            "value": "86"
+          },
+          {
+            "prompt": "4",
+            "value": "72"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 4,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "निम्न में से कौन-सा भू-अपरदन&amp;nbsp;का न्यूनतम दिखाई देने वाला रूप है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "अवनालिका अपरदन"
+          },
+          {
+            "prompt": "2",
+            "value": "भूस्खलन"
+          },
+          {
+            "prompt": "3",
+            "value": "परत अपरदन"
+          },
+          {
+            "prompt": "4",
+            "value": "बीहड़ों का निर्माण"
+          }
+        ]
+      },
+      "english": {
+        "question": "Which of the following is the LEAST visible form of land erosion?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Gully erosion"
+          },
+          {
+            "prompt": "2",
+            "value": "Landslides"
+          },
+          {
+            "prompt": "3",
+            "value": "Sheet erosion"
+          },
+          {
+            "prompt": "4",
+            "value": "Ravine formation"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 5,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "सी-यू-की या &amp;#39;द रिकॉर्ड्स ऑफ द वेस्टर्न वर्ल्ड&amp;#39; किसके द्वारा लिखा गया था:",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "मार्को पोलो"
+          },
+          {
+            "prompt": "2",
+            "value": "फाह्यान&amp;nbsp;"
+          },
+          {
+            "prompt": "3",
+            "value": "ह्वेन-त्सांग"
+          },
+          {
+            "prompt": "4",
+            "value": "अब्दुर रज्जाक"
+          }
+        ]
+      },
+      "english": {
+        "question": "Si-yu-ki or &amp;lsquo;The Records of the Western World&amp;rsquo; was written by:",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Marco Polo"
+          },
+          {
+            "prompt": "2",
+            "value": "Fa-Hien"
+          },
+          {
+            "prompt": "3",
+            "value": "Hiuen Tsiang"
+          },
+          {
+            "prompt": "4",
+            "value": "Abdur Razzak"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 6,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "बागवानी की वह शाखा जो सब्जियों के उत्पादन, भंडारण, प्रसंस्करण और विपणन से संबंधित है, ______ कहलाती है।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "शाक-कृषि"
+          },
+          {
+            "prompt": "2",
+            "value": "कृषिविज्ञान"
+          },
+          {
+            "prompt": "3",
+            "value": "फलकृषि"
+          },
+          {
+            "prompt": "4",
+            "value": "मधुमक्खी पालन"
+          }
+        ]
+      },
+      "english": {
+        "question": "The branch of horticulture which deals with the production, storage, processing and marketing of vegetables is called ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "olericulture"
+          },
+          {
+            "prompt": "2",
+            "value": "agronomy"
+          },
+          {
+            "prompt": "3",
+            "value": "pomology"
+          },
+          {
+            "prompt": "4",
+            "value": "apiculture"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 7,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "निम्नलिखित में से कौन सा एक पौधा मांसाहारी पौधा है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "क्लार्किया"
+          },
+          {
+            "prompt": "2",
+            "value": "ड्रोसेरा&amp;nbsp;"
+          },
+          {
+            "prompt": "3",
+            "value": "एलाईसम"
+          },
+          {
+            "prompt": "4",
+            "value": "हॉलीहॉक"
+          }
+        ]
+      },
+      "english": {
+        "question": "Which of the following is a carnivorous plant?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Clarkia"
+          },
+          {
+            "prompt": "2",
+            "value": "Drosera"
+          },
+          {
+            "prompt": "3",
+            "value": "Alyssum"
+          },
+          {
+            "prompt": "4",
+            "value": "Hollyhock"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 8,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "________ एक विकार है जिसके परिणामस्वरूप मस्तिष्क की कोशिकाओं से असामान्य विद्युत निर्वहन होता है जिससे दौरे पड़ते हैं।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "हाइपोग्लाइसीमिया"
+          },
+          {
+            "prompt": "2",
+            "value": "प्रोस्टेटाइटिस"
+          },
+          {
+            "prompt": "3",
+            "value": "रूमेटाइड अर्थराइटिस"
+          },
+          {
+            "prompt": "4",
+            "value": "मिर्गी&amp;nbsp;"
+          }
+        ]
+      },
+      "english": {
+        "question": "______ is a disorder resulting in abnormal electrical discharges from the brain cells causing seizures.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Hypoglycaemia"
+          },
+          {
+            "prompt": "2",
+            "value": "Prostatitis"
+          },
+          {
+            "prompt": "3",
+            "value": "Rheumatoid arthritis"
+          },
+          {
+            "prompt": "4",
+            "value": "Epilepsy"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 9,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "प्राचीन भारत में चिकित्सा के विषय में निम्नलिखित में से किसका योगदान था?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "भास"
+          },
+          {
+            "prompt": "2",
+            "value": "चरक&amp;nbsp;"
+          },
+          {
+            "prompt": "3",
+            "value": "पाणिनी"
+          },
+          {
+            "prompt": "4",
+            "value": "हर्ष"
+          }
+        ]
+      },
+      "english": {
+        "question": "Who among the following was a contributor to the subject of medicine in ancient India?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Bhasa"
+          },
+          {
+            "prompt": "2",
+            "value": "Charaka"
+          },
+          {
+            "prompt": "3",
+            "value": "Panini"
+          },
+          {
+            "prompt": "4",
+            "value": "Harsha"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 10,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "बेसिल कैलमेट-गुएरिन (&lt;span style=&quot;&quot;&gt;BCG&lt;/span&gt;) ______ के लिए एक टीका है।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "टाइफाइड"
+          },
+          {
+            "prompt": "2",
+            "value": "क्षय रोग (TB)"
+          },
+          {
+            "prompt": "3",
+            "value": "&lt;span style=&quot;&quot;&gt;मम्पस&amp;nbsp;&lt;/span&gt;"
+          },
+          {
+            "prompt": "4",
+            "value": "प्लेग"
+          }
+        ]
+      },
+      "english": {
+        "question": "Bacille Calmette-Gu&amp;eacute;rin (BCG) is a vaccine for ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "typhoid"
+          },
+          {
+            "prompt": "2",
+            "value": "tuberculosis (TB)"
+          },
+          {
+            "prompt": "3",
+            "value": "mumps"
+          },
+          {
+            "prompt": "4",
+            "value": "plague"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 11,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "क्षेत्रीय ग्रामीण बैंकों की स्थापना ग्रामीण ऋण पर _________ की सिफारिशों पर की गई थी।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "रेखी समिति"
+          },
+          {
+            "prompt": "2",
+            "value": "नरसिम्हा समिति"
+          },
+          {
+            "prompt": "3",
+            "value": "केलकर समिति"
+          },
+          {
+            "prompt": "4",
+            "value": "टंडन समिति"
+          }
+        ]
+      },
+      "english": {
+        "question": "The Regional Rural Banks were established on the recommendations of the ______ on Rural Credit.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Rekhi Committee"
+          },
+          {
+            "prompt": "2",
+            "value": "Narsimha Committee"
+          },
+          {
+            "prompt": "3",
+            "value": "Kelkar Committee"
+          },
+          {
+            "prompt": "4",
+            "value": "Tandon Committee"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 12,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "निम्नलिखित में से कौन &amp;#39;अनअकस्टम्ड अर्थ&amp;#39; पुस्तक के लेखक हैं?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "शोभा डे&amp;nbsp;"
+          },
+          {
+            "prompt": "2",
+            "value": "अरुंधति रॉय"
+          },
+          {
+            "prompt": "3",
+            "value": "अनीता नायर"
+          },
+          {
+            "prompt": "4",
+            "value": "झुम्पा लाहिरी"
+          }
+        ]
+      },
+      "english": {
+        "question": "Who among the following is the author of the book &amp;lsquo;Unaccustomed Earth&amp;rsquo;?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Shobha De"
+          },
+          {
+            "prompt": "2",
+            "value": "Arundhati Roy"
+          },
+          {
+            "prompt": "3",
+            "value": "Anita Nair"
+          },
+          {
+            "prompt": "4",
+            "value": "Jhumpa Lahiri"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 13,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "बिधान चंद्र रॉय पुरस्कार किस विषय में दिया जाता है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "खेल"
+          },
+          {
+            "prompt": "2",
+            "value": "औषधि"
+          },
+          {
+            "prompt": "3",
+            "value": "वास्तु-कला"
+          },
+          {
+            "prompt": "4",
+            "value": "कानून"
+          }
+        ]
+      },
+      "english": {
+        "question": "In which discipline is the Bidhan Chandra Roy Award given?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Sports"
+          },
+          {
+            "prompt": "2",
+            "value": "Medicine"
+          },
+          {
+            "prompt": "3",
+            "value": "Architecture"
+          },
+          {
+            "prompt": "4",
+            "value": "Law"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 14,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "अविश्वास प्रस्ताव के संदर्भ में, निम्नलिखित में से कौन सा कथन गलत है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "दि यह लोकसभा में पारित हो जाता है, तो मंत्रिपरिषद को अपने पद से इस्तीफा दे देना चाहिए।"
+          },
+          {
+            "prompt": "2",
+            "value": "इसे लोकसभा में इसके अपनाने के कारणों का उल्लेख करना चाहिए।"
+          },
+          {
+            "prompt": "3",
+            "value": "यह मंत्रिपरिषद में लोकसभा के विश्वास को सुनिश्चित करने के लिए पेश किया जाता है।"
+          },
+          {
+            "prompt": "4",
+            "value": "इसे केवल मंत्रिपरिषद के विरुद्ध ही पेश किया जा सकता है।"
+          }
+        ]
+      },
+      "english": {
+        "question": "With reference to no-confidence motion, which of the following statements is INCORRECT?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "If it is passed in the Lok Sabha, the council of ministers must resign from office."
+          },
+          {
+            "prompt": "2",
+            "value": "It should state the reasons for its adoption in the Lok Sabha."
+          },
+          {
+            "prompt": "3",
+            "value": "It is moved for ascertaining the confidence of Lok Sabha in the council of ministers."
+          },
+          {
+            "prompt": "4",
+            "value": "It can be moved against the entire council of ministers only."
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 15,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "विपणन सत्र 2021-22 के लिए जौ के लिए उनकी उत्पादन लागत पर एमएसपी (न्यूनतम समर्थन मूल्य) के माध्यम से किसानों को अपेक्षित रिटर्न _________ अनुमानित है।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "65%"
+          },
+          {
+            "prompt": "2",
+            "value": "93%"
+          },
+          {
+            "prompt": "3",
+            "value": "50%"
+          },
+          {
+            "prompt": "4",
+            "value": "106%"
+          }
+        ]
+      },
+      "english": {
+        "question": "The expected returns to farmers by way of MSP (Minimum Support Price) over their cost of production for barley for marketing season 2021&amp;ndash;22 is estimated at ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "65%"
+          },
+          {
+            "prompt": "2",
+            "value": "93%"
+          },
+          {
+            "prompt": "3",
+            "value": "50%"
+          },
+          {
+            "prompt": "4",
+            "value": "106%"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 16,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "निम्नलिखित में से कौन &amp;#39;अनफिनिश्ड : ए मेमॉयर&amp;#39; पुस्तक के लेखक हैं?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "आलिया भट्ट"
+          },
+          {
+            "prompt": "2",
+            "value": "प्रियंका चोपड़ा जोनस"
+          },
+          {
+            "prompt": "3",
+            "value": "दीपिका पादुकोण"
+          },
+          {
+            "prompt": "4",
+            "value": "कैटरीना कैफ"
+          }
+        ]
+      },
+      "english": {
+        "question": "Who among the following is the author of the book &amp;lsquo;Unfinished: A Memoir&amp;rsquo;?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Alia Bhatt"
+          },
+          {
+            "prompt": "2",
+            "value": "Priyanka Chopra Jonas"
+          },
+          {
+            "prompt": "3",
+            "value": "Deepika Padukone"
+          },
+          {
+            "prompt": "4",
+            "value": "Katrina Kaif"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 17,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "सूचना का अधिकार अधिनियम 2005 में एक संशोधन &lt;span style=&quot;&quot;&gt;वर्ष _____ में पारित किया गया था,&amp;nbsp;&lt;/span&gt;जिसमें प्रस्ताव किया गया था कि मुख्य सूचना आयुक्त और सूचना आयुक्तों को &amp;#39;केंद्र सरकार द्वारा निर्धारित अवधि के लिए&amp;#39; नियुक्त किया जाए।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "2016"
+          },
+          {
+            "prompt": "2",
+            "value": "2019"
+          },
+          {
+            "prompt": "3",
+            "value": "2017"
+          },
+          {
+            "prompt": "4",
+            "value": "2014"
+          }
+        ]
+      },
+      "english": {
+        "question": "An amendment to the Right to Information Act 2005 proposing that the Chief Information Commissioner and Information Commissioners be appointed &amp;lsquo;for such term as may be prescribed by the Central Government&amp;rsquo; was passed in the year _____.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "2016"
+          },
+          {
+            "prompt": "2",
+            "value": "2019"
+          },
+          {
+            "prompt": "3",
+            "value": "2017"
+          },
+          {
+            "prompt": "4",
+            "value": "2014"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 18,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "2011 की जनगणना के अनुसार, निम्नलिखित में से किस राज्य में &lt;span style=&quot;&quot;&gt;अधिकतम&amp;nbsp;&lt;/span&gt;प्रति वर्ग किलोमीटर जनसंख्या घनत्व है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "झारखंड"
+          },
+          {
+            "prompt": "2",
+            "value": "गोवा"
+          },
+          {
+            "prompt": "3",
+            "value": "गुजरात"
+          },
+          {
+            "prompt": "4",
+            "value": "महाराष्ट्र"
+          }
+        ]
+      },
+      "english": {
+        "question": "According to the Census of 2011, which of the following states has the highest density of population per km&lt;sup&gt;2&lt;/sup&gt;?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Jharkhand"
+          },
+          {
+            "prompt": "2",
+            "value": "Goa"
+          },
+          {
+            "prompt": "3",
+            "value": "Gujarat"
+          },
+          {
+            "prompt": "4",
+            "value": "Maharashtra"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 19,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "मार्च 2021 में, क्रिकेटर कीरोन पोलार्ड ने ______ के खिलाफ एक मैच में एक ओवर में छह छक्के लगाए।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "वेस्ट इंडीज"
+          },
+          {
+            "prompt": "2",
+            "value": "ऑस्ट्रेलिया"
+          },
+          {
+            "prompt": "3",
+            "value": "श्री लंका"
+          },
+          {
+            "prompt": "4",
+            "value": "न्यूजीलैंड"
+          }
+        ]
+      },
+      "english": {
+        "question": "In March 2021, cricketer Kieron Pollard hit six sixes in an over in a match against ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "West Indies"
+          },
+          {
+            "prompt": "2",
+            "value": "Australia"
+          },
+          {
+            "prompt": "3",
+            "value": "Sri Lanka"
+          },
+          {
+            "prompt": "4",
+            "value": "New Zealand"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 20,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "दुर्गा पूजा का त्योहार ______ पर देवी दुर्गा की विजय का जश्न मनाने के लिए मनाया जाता है।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "महिषासुर&amp;nbsp;"
+          },
+          {
+            "prompt": "2",
+            "value": "हिरण्यकश्यप"
+          },
+          {
+            "prompt": "3",
+            "value": "रावण"
+          },
+          {
+            "prompt": "4",
+            "value": "जरासंध"
+          }
+        ]
+      },
+      "english": {
+        "question": "The festival of Durga Puja is observed to celebrate the triumph of Goddess Durga over ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Mahishasura"
+          },
+          {
+            "prompt": "2",
+            "value": "Hiranyakashipu"
+          },
+          {
+            "prompt": "3",
+            "value": "Ravana"
+          },
+          {
+            "prompt": "4",
+            "value": "Jarasandha"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 21,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "निम्नलिखित में से कौन सा सतत विकास लक्ष्य सभी के लिए जल और स्वच्छता की उपलब्धता और सतत प्रबंधन सुनिश्चित करता है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "SDG 4"
+          },
+          {
+            "prompt": "2",
+            "value": "SDG 7"
+          },
+          {
+            "prompt": "3",
+            "value": "SDG 6"
+          },
+          {
+            "prompt": "4",
+            "value": "SDG 5"
+          }
+        ]
+      },
+      "english": {
+        "question": "Which of the following Sustainable Development Goals ensures availability and sustainable management of water and sanitation for all?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "SDG 4"
+          },
+          {
+            "prompt": "2",
+            "value": "SDG 7"
+          },
+          {
+            "prompt": "3",
+            "value": "SDG 6"
+          },
+          {
+            "prompt": "4",
+            "value": "SDG 5"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 22,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "मुगल दरबार के कालक्रम&amp;nbsp;______ में लिखे गए हैं।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "फारसी&amp;nbsp;"
+          },
+          {
+            "prompt": "2",
+            "value": "तुर्की"
+          },
+          {
+            "prompt": "3",
+            "value": "उर्दू"
+          },
+          {
+            "prompt": "4",
+            "value": "अरबी"
+          }
+        ]
+      },
+      "english": {
+        "question": "The Mughal court chronicles are written in ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "Persian"
+          },
+          {
+            "prompt": "2",
+            "value": "Turkish"
+          },
+          {
+            "prompt": "3",
+            "value": "Urdu"
+          },
+          {
+            "prompt": "4",
+            "value": "Arabic"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 23,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "केंद्रीय बजट 2021-22 में निम्नलिखित में से किस राज्य को राजमार्ग परियोजनाओं के लिए सबसे अधिक बजट आवंटित किया गया था?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "पश्चिम बंगाल"
+          },
+          {
+            "prompt": "2",
+            "value": "असम"
+          },
+          {
+            "prompt": "3",
+            "value": "तमिलनाडु"
+          },
+          {
+            "prompt": "4",
+            "value": "केरल"
+          }
+        ]
+      },
+      "english": {
+        "question": "Which of the following states was allocated the highest budget for highway projects in Union Budget 2021-22?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "West Bengal"
+          },
+          {
+            "prompt": "2",
+            "value": "Assam"
+          },
+          {
+            "prompt": "3",
+            "value": "Tamil Nadu"
+          },
+          {
+            "prompt": "4",
+            "value": "Kerala"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 24,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "संसद में विपक्ष के नेताओं के वेतन और भत्ते वर्ष ______में संसद द्वारा पहली बार पारित अधिनियम द्वारा शासित होते हैं।",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "1982"
+          },
+          {
+            "prompt": "2",
+            "value": "1977"
+          },
+          {
+            "prompt": "3",
+            "value": "1979"
+          },
+          {
+            "prompt": "4",
+            "value": "1972"
+          }
+        ]
+      },
+      "english": {
+        "question": "The salary and allowances of leaders of opposition in parliament are governed by the Act passed for the first time by the parliament in the year ______.",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "1982"
+          },
+          {
+            "prompt": "2",
+            "value": "1977"
+          },
+          {
+            "prompt": "3",
+            "value": "1979"
+          },
+          {
+            "prompt": "4",
+            "value": "1972"
+          }
+        ]
+      }
+    },
+    {
+      "QSNo": 25,
+      "SSNo": 1,
+      "SSSNo": 0,
+      "type": "mcq",
+      "hindi": {
+        "question": "कार्य करने की दर क्या कहलाती है?",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "आवेग"
+          },
+          {
+            "prompt": "2",
+            "value": "ऊर्जा"
+          },
+          {
+            "prompt": "3",
+            "value": "बल"
+          },
+          {
+            "prompt": "4",
+            "value": "शक्ति"
+          }
+        ]
+      },
+      "english": {
+        "question": "The rate of doing work is called:",
+        "options": [
+          {
+            "prompt": "1",
+            "value": "impulse"
+          },
+          {
+            "prompt": "2",
+            "value": "energy"
+          },
+          {
+            "prompt": "3",
+            "value": "force"
+          },
+          {
+            "prompt": "4",
+            "value": "power"
+          }
+        ]
+      }
+    }
+  ]
+}

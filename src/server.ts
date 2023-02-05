@@ -14,9 +14,24 @@ app.use(indexRoute.path, indexRoute.router);
 // AUTH ROUTES
 import googleAuthRoutes from '@routes/auth/google.route';
 import facebookAuthRoutes from '@routes/auth/facebook.route';
+import connectDatabase from '@/databases';
+import seriesRoutes from '@/routes/series/common.route';
+
+// const run = async () => {
+//   try {
+//     const done = await testSeriesModel.findById('63d31f17f569f9d9d8cc92f4');
+//     console.log(done);
+//   } catch (error) {}
+// };
+
+// run();
 app.use('/auth', googleAuthRoutes);
 app.use('/auth', facebookAuthRoutes);
+app.use('/v1', seriesRoutes);
 
+
+// Database Connection
+connectDatabase();
 // LISTEN PORT
 app.listen(port, () => {
   logger.info(`=================================`);
