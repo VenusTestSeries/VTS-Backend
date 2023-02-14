@@ -11,11 +11,13 @@ const env = NODE_ENV || 'development';
 import HomeRoute from '@routes/index.route';
 const indexRoute = HomeRoute();
 app.use(indexRoute.path, indexRoute.router);
+import connectDatabase from '@/databases';
 // AUTH ROUTES
 import googleAuthRoutes from '@routes/auth/google.route';
 import facebookAuthRoutes from '@routes/auth/facebook.route';
-import connectDatabase from '@/databases';
 import seriesRoutes from '@/routes/series/common.route';
+import imageRoutes from '@/routes/upload/image.route';
+import sectionRoutes from '@/routes/series/section.route';
 
 // const run = async () => {
 //   try {
@@ -25,10 +27,19 @@ import seriesRoutes from '@/routes/series/common.route';
 // };
 
 // run();
+
+const version = {
+  v1: '/v1',
+};
+
 app.use('/auth', googleAuthRoutes);
 app.use('/auth', facebookAuthRoutes);
-app.use('/v1', seriesRoutes);
+// app.use(version.v1, seriesRoutes);
+app.use(version.v1, sectionRoutes);
 
+// IMAGE ROUTES
+
+app.use(version.v1, imageRoutes);
 
 // Database Connection
 connectDatabase();
