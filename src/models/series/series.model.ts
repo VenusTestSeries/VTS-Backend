@@ -4,6 +4,7 @@ const seriesSchema: Schema = new Schema({
   uid: {
     type: Schema.Types.ObjectId,
     max: 4,
+    default: Schema.Types.UUID,
   },
   slug: {
     type: String,
@@ -46,6 +47,9 @@ const seriesSchema: Schema = new Schema({
             value: String,
           },
         ],
+        solution: {
+          type: String,
+        },
       },
       english: {
         question: String,
@@ -55,6 +59,9 @@ const seriesSchema: Schema = new Schema({
             value: String,
           },
         ],
+        solution: {
+          type: String,
+        },
       },
     },
   ],

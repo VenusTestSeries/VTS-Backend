@@ -9,38 +9,33 @@ const port = PORT || 5000;
 const env = NODE_ENV || 'development';
 // ROUTES
 import HomeRoute from '@routes/index.route';
-const indexRoute = HomeRoute();
-app.use(indexRoute.path, indexRoute.router);
 import connectDatabase from '@/databases';
-// AUTH ROUTES
 import googleAuthRoutes from '@routes/auth/google.route';
 import facebookAuthRoutes from '@routes/auth/facebook.route';
-import seriesRoutes from '@/routes/series/common.route';
 import imageRoutes from '@/routes/upload/image.route';
 import sectionRoutes from '@/routes/series/section.route';
+import userRoutes from '@/routes/users/user.route';
+const indexRoute = HomeRoute();
+app.use(indexRoute.path, indexRoute.router);
 
-// const run = async () => {
-//   try {
-//     const done = await testSeriesModel.findById('63d31f17f569f9d9d8cc92f4');
-//     console.log(done);
-//   } catch (error) {}
-// };
-
-// run();
-
-const version = {
+const info = {
   v1: '/v1',
+  get auth() {
+    return `${this.v1}/auth`;
+  },
+  get user() {
+    return `${this.v1}/user`;
+  },
 };
 
-app.use('/auth', googleAuthRoutes);
-app.use('/auth', facebookAuthRoutes);
-// app.use(version.v1, seriesRoutes);
-app.use(version.v1, sectionRoutes);
-
+// USER & AUTH ROUTES
+app.use(info.user, userRoutes);
+app.use(info.auth, googleAuthRoutes);
+app.use(info.auth, facebookAuthRoutes);
+// TEST SERIES ROUTES
+app.use(info.v1, sectionRoutes);
 // IMAGE ROUTES
-
-app.use(version.v1, imageRoutes);
-
+app.use(info.v1, imageRoutes);
 // Database Connection
 connectDatabase();
 // LISTEN PORT

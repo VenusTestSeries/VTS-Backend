@@ -58,6 +58,13 @@ const seriesSchema: Schema = new Schema({
       },
     },
   ],
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  updatedAt: {
+    type: Date,
+  },
 });
 
 const testSeriesModel = model('series', seriesSchema);

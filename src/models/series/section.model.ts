@@ -108,6 +108,13 @@ const seriesSchema = new Schema({
       ref: 'sections',
     },
   ],
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  updatedAt: {
+    type: Date,
+  },
 });
 
 const Series = model('series', seriesSchema);
