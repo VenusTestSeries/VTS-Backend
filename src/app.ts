@@ -19,7 +19,7 @@ app.use(
   session({
     resave: false,
     saveUninitialized: true,
-    secret: 'google-auth',
+    secret: 'auth-session',
   }),
 );
 app.use(passport.initialize());
