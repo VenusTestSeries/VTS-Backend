@@ -12,6 +12,9 @@ const info = {
   get user() {
     return `${this.v1}/user`;
   },
+  get image() {
+    return `${this.v1}/uploads`;
+  },
 };
 const port = PORT || 5000;
 const env = NODE_ENV || 'development';
@@ -23,6 +26,11 @@ import facebookAuthRoutes from '@routes/auth/facebook.route';
 import imageRoutes from '@/routes/upload/image.route';
 import sectionRoutes from '@/routes/series/section.route';
 import userRoutes from '@/routes/users/user.route';
+import express from 'express';
+
+// IMAGE ROUTES
+app.use(info.image, imageRoutes);
+app.use(info.image, express.static('dist/uploads/images'));
 
 // HOME ROUTES
 const indexRoute = HomeRoute();
@@ -34,8 +42,8 @@ app.use(info.auth, googleAuthRoutes);
 app.use(info.auth, facebookAuthRoutes);
 // TEST SERIES ROUTES
 app.use(info.v1, sectionRoutes);
-// IMAGE ROUTES
-app.use(info.v1, imageRoutes);
+// v1/
+// app.use(info.image, express.static('dist/uploads/images'));
 // Database Connection
 connectDatabase();
 // LISTEN PORT

@@ -17,4 +17,5 @@ export const {
   JWT_SECRET,
   JWT_EXPIRY,
   FORGET_PASSWORD_EXPIRE,
+  BASE_URL,
 } = process.env;
