@@ -23,12 +23,11 @@ import facebookAuthRoutes from '@routes/auth/facebook.route';
 import imageRoutes from '@/routes/upload/image.route';
 import sectionRoutes from '@/routes/series/section.route';
 import userRoutes from '@/routes/users/user.route';
+
+// HOME ROUTES
 const indexRoute = HomeRoute();
 app.use(indexRoute.path, indexRoute.router);
 app.use(info.v1, indexRoute.router);
-
-
-
 // USER & AUTH ROUTES
 app.use(info.user, userRoutes);
 app.use(info.auth, googleAuthRoutes);

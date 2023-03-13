@@ -1,14 +1,32 @@
 import { model, Schema } from 'mongoose';
 
-const sectionSchema: Schema = new Schema({
+const seriesSchema: Schema = new Schema({
+  uid: {
+    type: Schema.Types.ObjectId,
+    max: 4,
+    default: Schema.Types.UUID,
+  },
+  slug: {
+    type: String,
+  },
+  time: {
+    type: String,
+    timestamp: true,
+  },
   title: {
     type: String,
     required: true,
   },
-  questionsCount: {
-    type: Number,
+  is_saved: {
+    type: String,
   },
-
+  is_marked: {
+    type: String,
+  },
+  question_score: {
+    type: String,
+  },
+  user_attempt_list: [String],
   marks: {
     positive: Number,
     negative: Number,
@@ -25,8 +43,8 @@ const sectionSchema: Schema = new Schema({
         question: String,
         options: [
           {
+            prompt: String,
             value: String,
-            correct: Boolean,
           },
         ],
         solution: {
@@ -37,8 +55,8 @@ const sectionSchema: Schema = new Schema({
         question: String,
         options: [
           {
+            prompt: String,
             value: String,
-            correct: Boolean,
           },
         ],
         solution: {
@@ -47,19 +65,7 @@ const sectionSchema: Schema = new Schema({
       },
     },
   ],
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  updatedAt: {
-    type: Date,
-  },
 });
 
-// const Series = model('series', seriesSchema);
-const Sections = model('sections', sectionSchema);
-// const Questions = model('questions', questionSchema);
-/**
- * Series → Sections → Questions
- */
-export default Sections;
+const testSeriesModel = model('series', seriesSchema);
+export default testSeriesModel;

@@ -61,8 +61,9 @@ router.get(uploadPath, (req, res) => {
 /**
  * Upload An Image in DB
  */
-router.post(uploadPath, upload.single('image'), async (req, res) => {
+router.post(uploadPath, upload.single('file'), async (req, res) => {
   const { body, file } = req;
+
   try {
     res.json({ body, file });
   } catch (error) {
@@ -73,23 +74,30 @@ router.post(uploadPath, upload.single('image'), async (req, res) => {
 /**
  * Display single file object
  */
-router.get(`${uploadPath}/:filename`, (req, res) => {
-  gridfs.files.findOne({ filename: req.params.filename }, (err, file) => {
-    // Check if file
-    if (!file || file.length === 0) {
-      return res.status(404).json({
-        err: 'No file exists',
-      });
-    }
-    // File exists
-    return res.json(file);
-  });
+router.get(`${uploadPath}/:filename`, async (req, res) => {
+  try {
+    const file = await gridfs.files.findOne({ filename: req.params.filename });
+    const readStream = gridfs.createReadStream(file.filename);
+    readStream.pipe(res);
+  } catch (error) {
+    res.send('not found');
+  }
+  // gridfs.files.findOne({ filename: req.params.filename }, (err, file) => {
+  //   // Check if file
+  //   if (!file || file.length === 0) {
+  //     return res.status(404).json({
+  //       err: 'No file exists',
+  //     });
+  //   }
+  //   // File exists
+  //   return res.json(file);
+  // });
 });
 
 /**
  * Display Image
  */
-router.get(`${uploadPath}/image/:filename`, (req, res) => {
+router.get(`${uploadPath}/display/:filename`, (req, res) => {
   gridfs.files.findOne({ filename: req.params.filename }, (err, file) => {
     // Check if file
     if (!file || file.length === 0) {

@@ -1,8 +1,8 @@
-import { signUp, signIn, getAllUsers, getUserById, deleteUserById } from '@/controllers/user.controller';
+import * as userController from '@/controllers/user.controller';
 import { Router } from 'express';
 
+const { signUp, signIn, getAllUsers, getUserById, deleteUserById } = userController;
 const router = Router();
-
 /**
  * Get All Users
  */
@@ -20,20 +20,14 @@ router.get('/:user_id', getUserById);
  */
 router.delete('/:user_id', deleteUserById);
 /**
- * Create User
+ * Sign Up User
  */
-router.post('/signin', signIn);
 router.post('/signup', signUp);
+router.post('/register', signUp);
 /**
- * Update User
+ * Sign In User
  */
-
-/**
- * Delete User
- */
-
-/**
- * Get User
- */
+router.post('/login', signIn);
+router.post('/signin', signIn);
 
 export default router;

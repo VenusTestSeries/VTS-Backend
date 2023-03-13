@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { Series, Sections } from '@/models/series/section.model';
+import Sections from '@/models/series/section.model';
+import Series from '@/models/series/series.model';
 
 const router = Router();
 const seriesPath = '/series';
@@ -35,6 +36,24 @@ router.get(seriesPath, async (req, res) => {
   }
 });
 /**
+ * Get All With Course Series
+ */
+router.get(`${seriesPath}/:course`, async (req, res) => {
+  const course = req.params.course as string;
+  try {
+    const courseTags = course.split('+');
+    const response = await Series.find();
+    const filterByCourse = response.filter(item => item.course.some(item => courseTags.includes(item)));
+    if (course) {
+      res.status(200).json(filterByCourse);
+    } else {
+      res.status(200).json(response);
+    }
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+/**
  * Get Series By Id
  */
 router.get(`${seriesPath}/:series_id`, async (req, res) => {
@@ -46,12 +65,12 @@ router.get(`${seriesPath}/:series_id`, async (req, res) => {
   }
 });
 /**
- * Delete A Series based in ID
+ * Update A Series based in ID
  */
-router.put(`${seriesPath}/:id`, async (req, res) => {
+router.patch(`${seriesPath}/:series_id`, async (req, res) => {
   const _data = req.body;
   try {
-    const response = await Series.findByIdAndUpdate({ _id: req.params.id }, _data);
+    const response = await Series.findByIdAndUpdate({ _id: req.params.series_id }, _data);
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json(error);
@@ -60,9 +79,9 @@ router.put(`${seriesPath}/:id`, async (req, res) => {
 /**
  * Delete A Series based in ID
  */
-router.delete(`${seriesPath}/:id`, async (req, res) => {
+router.delete(`${seriesPath}/:series_id`, async (req, res) => {
   try {
-    const response = await Series.deleteOne({ _id: req.params.id });
+    const response = await Series.deleteOne({ _id: req.params.series_id });
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json(error);

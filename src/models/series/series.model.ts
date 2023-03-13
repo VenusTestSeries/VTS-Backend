@@ -1,71 +1,45 @@
-import { model, Schema } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
-const seriesSchema: Schema = new Schema({
-  uid: {
-    type: Schema.Types.ObjectId,
-    max: 4,
-    default: Schema.Types.UUID,
-  },
+/**
+ * Series Schema
+ */
+const seriesSchema = new Schema({
+  course: [String],
   slug: {
     type: String,
   },
-  time: {
-    type: String,
-    timestamp: true,
+  duration: {
+    type: Number,
   },
   title: {
     type: String,
     required: true,
   },
   is_saved: {
-    type: String,
+    type: Boolean,
   },
   is_marked: {
-    type: String,
+    type: Boolean,
   },
   question_score: {
     type: String,
   },
   user_attempt_list: [String],
-  marks: {
-    positive: Number,
-    negative: Number,
-  },
-  questions: [
+  sections: [
     {
-      type: {
-        type: String,
-      },
-      QSNo: Number,
-      SSNo: Number,
-      SSSNo: Number,
-      hindi: {
-        question: String,
-        options: [
-          {
-            prompt: String,
-            value: String,
-          },
-        ],
-        solution: {
-          type: String,
-        },
-      },
-      english: {
-        question: String,
-        options: [
-          {
-            prompt: String,
-            value: String,
-          },
-        ],
-        solution: {
-          type: String,
-        },
-      },
+      type: Schema.Types.ObjectId,
+      ref: 'sections',
     },
   ],
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  updatedAt: {
+    type: Date,
+  },
 });
 
-const testSeriesModel = model('series', seriesSchema);
-export default testSeriesModel;
+const Series = model('series', seriesSchema);
+
+export default Series;

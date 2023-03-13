@@ -77,18 +77,3 @@ router.delete(`${basePath}/:id`, async (req, res) => {
 });
 
 export default router;
-
-// const CRUD={
-//     CREATE:(req,res)=>{
-
-//     },
-//     READ:(req,res)=>{
-
-//     },
-//     UPDATE:(req,res)=>{
-
-//     },
-//     DELETE:(req,res)=>{
-
-//     },
-// }

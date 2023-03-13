@@ -9,7 +9,6 @@ import { stream } from '@utils/logger';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import methodOverride from 'method-override';
-
 import errorMiddleware from '@middlewares/error.middleware';
 import { LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 // EXPRESS APP

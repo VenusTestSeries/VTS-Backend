@@ -334,3 +334,19 @@ export default router;
 //     res.status(500).json(error);
 //   }
 // });
+
+
+// const CRUD={
+//     CREATE:(req,res)=>{
+
+//     },
+//     READ:(req,res)=>{
+
+//     },
+//     UPDATE:(req,res)=>{
+
+//     },
+//     DELETE:(req,res)=>{
+
+//     },
+// }
