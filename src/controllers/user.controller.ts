@@ -48,10 +48,12 @@ export const signUp = bigPromise(async (req, res, next) => {
 export const signIn = bigPromise(async (req, res, next) => {
   const { email, password } = req.body;
 
+  console.log(req.body);
   if (!email || !password) {
     return next(new Error('Email and password Required '));
   }
   const user = await User.findOne({ email }).select('+password');
+  console.log({ user });
   if (!user) {
     return next(new Error('Email and password not matched '));
   }

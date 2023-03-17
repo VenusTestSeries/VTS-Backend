@@ -11,14 +11,13 @@ const directory = {
 };
 
 router.post('/', upload.single('image'), async (req: Request, res: Response) => {
+  if (!req.file) {
+    return res.status(400).send({
+      success: false,
+      message: 'IMAGE is required',
+    });
+  }
   try {
-    if (!req.file) {
-      return res.status(400).send({
-        success: false,
-        message: 'IMAGE is required',
-      });
-    }
-    // const filename = path.basename(req.file.originalname, path.extname(req.file.originalname));
     const { dirOne, dirTwo } = directory;
     const imageUploadUrl = await UploadSingleImage({
       filename: 'simple_image',
@@ -38,3 +37,5 @@ export default router;
 //   ...req.file,
 //   url: imageUploadUrl,
 // });
+
+// const filename = path.basename(req.file.originalname, path.extname(req.file.originalname));

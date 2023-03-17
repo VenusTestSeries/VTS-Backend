@@ -21,28 +21,34 @@ const sectionSchema: Schema = new Schema({
       QSNo: Number,
       SSNo: Number,
       SSSNo: Number,
+      image: String,
       hindi: {
         question: String,
         options: [
           {
             value: String,
             correct: Boolean,
+            image: String,
           },
         ],
         solution: {
           type: String,
+          image: String,
         },
       },
       english: {
         question: String,
+        image: String,
         options: [
           {
             value: String,
             correct: Boolean,
+            image: String,
           },
         ],
         solution: {
           type: String,
+          image: String,
         },
       },
     },
