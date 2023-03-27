@@ -1,16 +1,9 @@
 import { Router } from 'express';
-import IndexController from '@controllers/index.controller';
-import { Routes } from '@/typings/routes';
+import { home } from '@controllers/index.controller';
 
-function home(): Routes {
-  const path = '/';
-  const router = Router();
-  const indexController = IndexController();
-  router.get(`${path}`, indexController.home);
-  return {
-    path,
-    router,
-  } as const;
-}
+const path = '/';
+const router = Router();
 
-export default home;
+router.get(path, home);
+
+export default router;

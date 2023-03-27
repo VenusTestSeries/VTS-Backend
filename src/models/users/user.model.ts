@@ -20,12 +20,13 @@ const userSchema = new Schema(
     },
     password: {
       type: String,
-      required: [true, 'Please Provide a password'],
+      required: [false, 'Please Provide a password'],
       minLength: [8, 'Password should be atleast 8 characters'],
       select: false,
     },
     role: {
       type: String,
+      enum: ['user', 'admin', 'sub-admin', 'super-admin', 'developer'],
       default: 'user',
     },
     avatar: {
@@ -45,6 +46,17 @@ const userSchema = new Schema(
     },
     updatedAt: {
       type: Date,
+    },
+    provider: {
+      type: String,
+      enum: ['local', 'google', 'facebook'],
+      default: 'local',
+    },
+    refreshToken: {
+      type: String,
+    },
+    accessToken: {
+      type: String,
     },
   },
 

@@ -1,8 +1,9 @@
 import path from 'path';
 import * as fs from 'fs';
 import sharp from 'sharp';
-import MultipleFile from '@/models/image/multiple.route';
 import { randomBytes } from 'crypto';
+import { Request, Response } from 'express';
+import { BASE_URL } from '@/config';
 
 type UploadImageOptions = {
   filename: string;
@@ -10,6 +11,82 @@ type UploadImageOptions = {
   file: Express.Multer.File | undefined;
   urlRoot: string;
 };
+
+const directory = {
+  uploads: 'uploads',
+  images: 'images',
+  series: 'series',
+  users: 'users',
+};
+
+export const uploadImage = async (req: Request, res: Response) => {
+  if (!req.file) {
+    return res.status(400).send({
+      success: false,
+      message: 'IMAGE is required',
+    });
+  }
+  try {
+    const { uploads, images } = directory;
+    const imageUploadUrl = await UploadSingleImage({
+      filename: 'image',
+      file: req.file,
+      urlRoot: `${BASE_URL}/${uploads}`,
+      destination: [uploads, images],
+    });
+    res.send(imageUploadUrl);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+export const uploadSeriesImage = async (req: Request, res: Response) => {
+  if (!req.file) {
+    return res.status(400).send({
+      success: false,
+      message: 'IMAGE is required',
+    });
+  }
+  try {
+    const { uploads, series } = directory;
+    const imageUploadUrl = await UploadSingleImage({
+      filename: 'image',
+      file: req.file,
+      urlRoot: `${BASE_URL}/${uploads}`,
+      destination: [uploads, series],
+    });
+    res.send(imageUploadUrl);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+export const uploadUserIMage = async (req: Request, res: Response) => {
+  if (!req.file) {
+    return res.status(400).send({
+      success: false,
+      message: 'IMAGE is required',
+    });
+  }
+  try {
+    const { uploads, users } = directory;
+    const imageUploadUrl = await UploadSingleImage({
+      filename: 'simple_image',
+      file: req.file,
+      urlRoot: `${BASE_URL}/${uploads}`,
+      destination: [uploads, users],
+    });
+    res.send(imageUploadUrl);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+// res.status(200).json({
+//   ...req.file,
+//   url: imageUploadUrl,
+// });
+
+// const filename = path.basename(req.file.originalname, path.extname(req.file.originalname));
 
 // UPLOAD SINGLE IMAGE
 export const UploadSingleImage = async (options: UploadImageOptions) => {
@@ -31,68 +108,4 @@ export const UploadSingleImage = async (options: UploadImageOptions) => {
     fs.unlinkSync(file.path);
     throw error;
   }
-};
-
-// .resize(850, 600, {
-//   fit: 'cover',
-// })
-
-type IDetails = {
-  name: string;
-  price: string;
-  des: string;
-};
-
-export const multipleFileUpload = async (files: any, details: IDetails) => {
-  if (!details.name || !details.price || !details.des) {
-    throw Error('all fields are required');
-  }
-  let filesArray: any = [];
-  files.forEach((element: any) => {
-    const file = {
-      fileName: element.originalname,
-      filePath: element.path,
-      fileType: element.mimetype,
-      fileSize: fileSizeFormatter(element.size, 2),
-    };
-    filesArray.push(file);
-  });
-
-  const multipleFiles = new MultipleFile({
-    name: details.name,
-    price: details.price,
-    des: details.des,
-    files: filesArray,
-  });
-  await multipleFiles.save();
-  return 'Files Uploaded Successfully';
-};
-
-//check file size here...
-const fileSizeFormatter = (bytes: number, decimal: number) => {
-  if (bytes === 0) {
-    return '0 Bytes';
-  }
-  const dm = decimal || 2;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'YB', 'ZB'];
-  const index = Math.floor(Math.log(bytes) / Math.log(1000));
-  return parseFloat((bytes / Math.pow(1000, index)).toFixed(dm)) + ' ' + sizes[index];
-};
-
-//  get all multiple beds
-export const getMultipleFilesService = async () => {
-  const response = await MultipleFile.find();
-  return response;
-};
-
-// get multiple beds by id
-export const getMultipleFilesByIdService = async (id: string) => {
-  const response = await MultipleFile.findById(id);
-  return response;
-};
-
-// delete beds by id
-export const deleteFileService = async (id: string) => {
-  const deleteFile = await MultipleFile.findByIdAndDelete(id);
-  return deleteFile;
 };

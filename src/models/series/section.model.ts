@@ -62,10 +62,6 @@ const sectionSchema: Schema = new Schema({
   },
 });
 
-// const Series = model('series', seriesSchema);
 const Sections = model('sections', sectionSchema);
-// const Questions = model('questions', questionSchema);
-/**
- * Series → Sections → Questions
- */
+
 export default Sections;

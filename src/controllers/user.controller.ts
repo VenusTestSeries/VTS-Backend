@@ -47,8 +47,6 @@ export const signUp = bigPromise(async (req, res, next) => {
 
 export const signIn = bigPromise(async (req, res, next) => {
   const { email, password } = req.body;
-
-  console.log(req.body);
   if (!email || !password) {
     return next(new Error('Email and password Required '));
   }
