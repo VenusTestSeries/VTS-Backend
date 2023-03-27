@@ -1,0 +1,40 @@
+{
+  "uid": "",
+  "slug": "",
+  "time": "",
+  "title": "",
+  "is_saved": "",
+  "is_marked": "",
+  "question_score": "",
+  "user_attempt_list": "",
+  "questions": [
+    {
+      "type": "",
+      "QSNo": "",
+      "SSNo": "",
+      "SSSNo": "",
+      "hindi": {
+        "question": "",
+        "options": [
+          {
+            "prompt": "",
+            "value": ""
+          }
+        ]
+      },
+      "english": {
+        "question": "",
+        "options": [
+          {
+            "prompt": "",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ],
+  "marks": {
+    "positive": 2,
+    "negative": 0.5
+  }
+}

@@ -8,6 +8,7 @@ import session from 'express-session';
 import { stream } from '@utils/logger';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
+import methodOverride from 'method-override';
 import errorMiddleware from '@middlewares/error.middleware';
 import { LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 // EXPRESS APP
@@ -17,7 +18,7 @@ app.use(
   session({
     resave: false,
     saveUninitialized: true,
-    secret: 'google-auth',
+    secret: 'auth-session',
   }),
 );
 app.use(passport.initialize());
@@ -40,5 +41,6 @@ app.use(morgan(LOG_FORMAT, { stream }));
 app.use(express.urlencoded({ extended: true }));
 // Error Handling
 app.use(errorMiddleware);
+app.use(methodOverride('_method'));
 
 export default app;

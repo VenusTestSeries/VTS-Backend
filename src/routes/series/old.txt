@@ -1,0 +1,352 @@
+import { model, Schema } from 'mongoose';
+
+// QUESTION SCHEMA
+
+const questionSchema: Schema = new Schema({
+  questions: [
+    {
+      question: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
+});
+
+// SECTION SCHEMA
+
+const sectionSchema: Schema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  sections: {
+    type: Schema.Types.ObjectId,
+    ref: 'Questions',
+  },
+});
+
+const Questions = model('Questions', questionSchema);
+const Sections = model('Sections', sectionSchema);
+
+export { Questions, Sections };
+// slug: {
+//   type: String,
+// },
+// time: {
+//   type: String,
+//   timestamp: true,
+// },
+// type: {
+//   type: String,
+// },
+// QSNo: Number,
+// SSNo: Number,
+// SSSNo: Number,
+// hindi: {
+//   question: String,
+//   options: [
+//     {
+//       prompt: String,
+//       value: String,
+//     },
+//   ],
+// },
+// english: {
+//   question: String,
+//   options: [
+//     {
+//       prompt: String,
+//       value: String,
+//     },
+//   ],
+// },
+
+
+
+
+import { Router } from 'express';
+import mongoose from 'mongoose';
+// import { Questions, Sections } from '@/models/series/section.model';
+
+const router = Router();
+const sectionPath = '/sections';
+const questionPath = '/questions';
+
+// // POST QUESTION TO DATABASE
+// router.post(questionPath, async (req, res) => {
+//   const bodyData = req.body;
+//   try {
+//     const response = await Questions.create({ ...bodyData });
+//     res.status(200).json(response);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+// router.get(questionPath, async (req, res) => {
+//   try {
+//     const response = await Questions.find();
+//     res.status(200).json(response);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+// // POST SECTION TO DATABASE
+// router.post(sectionPath, async (req, res) => {
+//   const bodyData = req.body;
+
+//   try {
+//     const response = await Sections.create({ ...bodyData });
+//     res.status(200).json(response);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+// // GET ALL SERIES TO DATABASE
+// // /v1/series
+// router.get(sectionPath, async (req, res) => {
+//   try {
+//     Sections.find()
+//       .populate('sections')
+//       .exec((err, data) => {
+//         if (err) {
+//           res.send(err);
+//         }
+//         res.status(200).json(data);
+//       });
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+// router.get(`${sectionPath}/:id`, async (req, res) => {
+//   try {
+//     Sections.findById({ _id: req.params.id })
+//       .populate({
+//         path: 'sections',
+//         select: '_id',
+//       })
+//       .exec((err, data) => {
+//         console.log(data);
+//         res.status(200).json(data);
+//       });
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+// export default router;
+
+const Person = mongoose.model(
+  'Person',
+  new mongoose.Schema({
+    name: String,
+  }),
+);
+
+// `ref` tells Mongoose populate what model to query
+const Movie = mongoose.model(
+  'Movie',
+  new mongoose.Schema({
+    title: String,
+    director: {
+      type: mongoose.Types.ObjectId,
+      ref: 'Person',
+    },
+    actors: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Person',
+      },
+    ],
+  }),
+);
+
+router.post(sectionPath, async (req, res) => {
+  try {
+    const people = await Person.create([{ name: 'James Cameron' }, { name: 'Arnold Schwarzenegger' }, { name: 'Linda Hamilton' }]);
+    await Movie.create({
+      title: 'Terminator 2',
+      director: people[0]._id,
+      actors: people.map(data => data._id),
+    });
+    res.status(200).json(people);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+router.get(sectionPath, async (req, res) => {
+  try {
+    Movie.findOne()
+      .populate('director')
+      .exec((err, data) => {
+        res.status(200).json(data);
+      });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+export default router;
+
+
+
+// // CREATING SECTION TO DATABASE
+// router.post(seriesPath, async (req, res) => {
+//   const bodyData = req.body;
+//   try {
+//     const response = await Sections.create({ ...bodyData });
+//     res.status(200).json(response);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+// // CREATING QUESTION TO DATABASE
+// router.post(`${questionPath}/:id`, async (req, res) => {
+//   try {
+//     Questions.create(req.body, async (err: any, data: any) => {
+//       if (err) {
+//         return res.status(500).send(err);
+//       }
+//       await Sections.findByIdAndUpdate(req.params.id, {
+//         $push: {
+//           sections: data._id,
+//         },
+//       });
+//       res.status(200).json(data);
+//     });
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+// router.get(questionPath, async (req, res) => {
+//   try {
+//     const data = await Questions.find();
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+// router.get(`${questionPath}/:id`, async (req, res) => {
+//   try {
+//     const data = await Questions.findById(req.params.id);
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+// // GET ALL SERIES TO DATABASE
+// router.get(seriesPath, async (req, res) => {
+//   try {
+//     const data = await Sections.find().populate({ path: 'sections', select: '_id' }).lean();
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+// router.get(`${seriesPath}/:id`, async (req, res) => {
+//   try {
+//     const data = await Sections.findById(req.params.id).populate({ path: 'sections' }).lean();
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+/**
+ * Get All Series With Section
+ */
+// router.get(`${seriesPath}/sections`, async (req, res) => {
+//   try {
+//     const response = await Series.find().populate({
+//       path: 'sections',
+//       select: '_id',
+//     });
+//     res.status(200).json(response);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+
+/**
+ * Get Single Section With Questions IDs
+ */
+// router.get(`${sectionPath}/questions/:section_id`, async (req, res) => {
+//   try {
+//     const data = await Sections.findById({ _id: req.params.section_id }).populate({
+//       path: 'questions',
+//       // select: '_id',
+//     });
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+/**
+ * **************
+ * QUESTIONS API
+ * **************
+ */
+/**
+ * Create Question with Section ID
+ */
+// router.post(`${questionPath}/:section_id`, async (req, res) => {
+//   const _data = req.body;
+//   try {
+//     Questions.create(_data, async (err: any, data: { _id: any }) => {
+//       if (err) {
+//         return res.status(500).json(err);
+//       }
+//       await Sections.findByIdAndUpdate(req.params.section_id, {
+//         $push: {
+//           questions: data._id,
+//         },
+//       });
+//       res.status(200).json(data);
+//     });
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+/**
+ * Get All Question
+ */
+// router.get(`${questionPath}`, async (req, res) => {
+//   try {
+//     const data = await Questions.find();
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+/**
+ * Create Question with Section ID
+ */
+// router.delete(`${questionPath}/:id`, async (req, res) => {
+//   try {
+//     const data = await Questions.deleteOne({ _id: req.params.id });
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
+
+
+// const CRUD={
+//     CREATE:(req,res)=>{
+
+//     },
+//     READ:(req,res)=>{
+
+//     },
+//     UPDATE:(req,res)=>{
+
+//     },
+//     DELETE:(req,res)=>{
+
+//     },
+// }

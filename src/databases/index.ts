@@ -1,9 +1,22 @@
-import { DB_HOST, DB_PORT, DB_DATABASE } from '@config';
+import mongoose from 'mongoose';
+import { MONGODB_URI } from '@config';
+import { logger } from '@/utils/logger';
 
-export const dbConnection = {
-  url: `mongodb://${DB_HOST}:${DB_PORT}/${DB_DATABASE}`,
-  options: {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
+const connectDatabase = async () => {
+  try {
+    await mongoose.connect(MONGODB_URI, {});
+    logger.info(`Connected To Database`);
+  } catch (error) {
+    logger.error(error);
+  }
 };
+
+export default connectDatabase;
+
+// export const dbConnection = {
+//   url: MONGODB_URI,
+//   options: {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   },
+// };

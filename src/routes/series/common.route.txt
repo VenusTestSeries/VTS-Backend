@@ -1,0 +1,79 @@
+import { Router } from 'express';
+import testSeriesModel from '@/models/series/series.model';
+
+const router = Router();
+const basePath = '/series';
+
+// GET ALL SERIES TO DATABASE
+// /v1/series
+router.get(`${basePath}`, async (req, res) => {
+  try {
+    const data = await testSeriesModel.find();
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// GET ONE SERIES TO DATABASE
+// /v1/series
+router.get(`${basePath}/:id`, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const data = await testSeriesModel.findById(id);
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// ADD SERIES TO DATABASE
+// /v1/series
+router.post(`${basePath}`, async (req, res) => {
+  const bodyData = req.body;
+  // console.log({ data });
+  try {
+    const _data = await testSeriesModel.create({
+      ...bodyData,
+    });
+    res.status(200).json(_data);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// UPDATE SERIES TO DATABASE
+// /v1/series/:id
+router.put(`${basePath}/:id`, async (req, res) => {
+  const { id } = req.params;
+  const bodyData = req.body;
+  try {
+    const _data = await testSeriesModel.findById(id).updateOne({
+      ...bodyData,
+    });
+    console.log(_data);
+    res.status(200).json({
+      message: `Update ${id}`,
+    });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// UDELETE SERIES FROM DATABASE
+// /v1/series/:id
+router.delete(`${basePath}/:id`, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const data = (await testSeriesModel.findById(id)).deleteOne();
+    console.log(data);
+    res.status(200).json({
+      message: `Deleted ${id}`,
+      ...data,
+    });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+export default router;
