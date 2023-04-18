@@ -1,4 +1,5 @@
 import app from '@/app';
+import * as http from 'http';
 import { logger } from '@utils/logger';
 import { NODE_ENV, PORT } from '@config';
 import validateEnv from '@utils/validateEnv';
@@ -13,6 +14,7 @@ import seriesRoutes from '@/routes/series/series.route';
 import sectionRoutes from '@/routes/series/section.route';
 import googleAuthRoutes from '@routes/auth/google.route';
 import facebookAuthRoutes from '@routes/auth/facebook.route';
+// import SocketService from '@/services/socket-io';
 
 const info = {
   '/': '/',
@@ -27,6 +29,11 @@ const info = {
 const env = NODE_ENV || 'development';
 
 // HOME ROUTES
+// const server = http.createServer(app);
+// We instantiate our SocketService
+// const socketService = new SocketService(server);
+// socketService.listenStore();
+// socketService.listenUserActivity();
 
 app.use(info['/'], HomeRoute);
 app.use(info['v1'], HomeRoute);
