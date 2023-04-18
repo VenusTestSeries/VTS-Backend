@@ -70,7 +70,7 @@ export const uploadUserIMage = async (req: Request, res: Response) => {
   try {
     const { uploads, users } = directory;
     const imageUploadUrl = await UploadSingleImage({
-      filename: 'simple_image',
+      filename: 'user_image',
       file: req.file,
       urlRoot: `${BASE_URL}/${uploads}`,
       destination: [uploads, users],
@@ -80,13 +80,6 @@ export const uploadUserIMage = async (req: Request, res: Response) => {
     res.status(500).send(error);
   }
 };
-
-// res.status(200).json({
-//   ...req.file,
-//   url: imageUploadUrl,
-// });
-
-// const filename = path.basename(req.file.originalname, path.extname(req.file.originalname));
 
 // UPLOAD SINGLE IMAGE
 export const UploadSingleImage = async (options: UploadImageOptions) => {

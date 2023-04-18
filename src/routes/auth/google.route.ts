@@ -61,18 +61,3 @@ router.get(
 router.get(`/google/callback`, passport.authenticate('google', { failureRedirect: `/google/failure}`, successRedirect: '/integration/google' }));
 
 export default router;
-
-// router.get(`${basePath}/logout `, authController.logout);
-// router.get(`${basePath}/failure`, authController.loginFailure);
-// router.get(
-//     `${basePath}/success`,
-//     passport.authenticate('google', {
-//       failureRedirect: '/integration/google',
-//       successRedirect: '/integration/google/callback',
-//     }),
-//     (req, res) => {
-//       console.log(res);
-//       res.redirect('/integration/google/callback');
-//     },
-//   );
-// router.get(`${basePath}/`, passport.authenticate('google', { scope: ['openid', 'profile', 'email'] }));
